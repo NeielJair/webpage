@@ -1,0 +1,72 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "quotes": ["error"],
+    "arrow-parens": ["warn"],
+    "no-param-reassign": ["warn"],
+    "no-nested-ternary": ["off"],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-underscore-dangle": ["off"],
+    "no-unused-vars": ["off"],
+    "no-restricted-imports": [
+      "error",
+      {
+        "name": "moment",
+        "message": "Did you mean moment-timezone?"
+      },
+      {
+        "name": "react-router",
+        "message": "Did you mean react-router-dom?"
+      }
+    ],
+    "no-restricted-syntax": "off",
+    "no-named-as-default": "off",
+    // "max-len": ["warn", { "code": 80 }]
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "@typescript-eslint/naming-convention": [
+      "off",
+      {
+        "selector": "default",
+        "format": ["camelCase", "snake_case", "PascalCase", "UPPER_CASE"],
+        "leadingUnderscore": "allow"
+      }
+    ],
+    "react/react-in-jsx-scope": ["off"],
+    "react/jsx-uses-react": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/no-unescaped-entities": ["off"],
+    "react/require-default-props": ["off"],
+    "react/no-array-index-key": ["warn"],
+    "react/no-unstable-nested-components": ["warn"],
+    "react/jsx-no-bind": ["warn"],
+    "react/state-in-constructor": ["off"],
+    "react/destructuring-assignment": ["off"],
+    "jsx-a11y/click-events-have-key-events": ["warn"],
+    "jsx-a11y/no-static-element-interactions": ["warn"],
+    "jsx-a11y/no-noninteractive-tabindex": ["warn"],
+    "jsx-a11y/tabindex-no-positive": ["warn"],
+    "prettier/prettier": "warn"
+  }
+}
