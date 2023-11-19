@@ -1,13 +1,23 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import WebpageRouter from './WebpageRouter';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <WebpageRouter />
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <WebpageRouter />
+    </ThemeProvider>
   </React.StrictMode>,
 );
 
