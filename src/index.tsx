@@ -1,20 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { HashRouter, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import App from './pages/App/App';
-import Maxi from './pages/Maxi/Maxi';
+import WebpageRouter from './WebpageRouter';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path="/maxi" element={<Maxi />} />
-        <Route path="/" element={<App />} />
-        <Route path="*" element={<p>I can't find it (404)</p>} />
-      </Routes>
-    </HashRouter>
+    <WebpageRouter />
   </React.StrictMode>,
 );
 
